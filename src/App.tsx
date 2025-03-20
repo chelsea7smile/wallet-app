@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { GlobalStyles } from './styles/GlobalStyles';
+import CardBalance from './components/CardBalance';
+// import PaymentStatus from './components/PaymentStatus';
+import TransactionsList from './components/TransactionsList';
+import TransactionDetail from './components/TransactionDetail';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <GlobalStyles />
+      <div className="container">
+        <Routes>
+          <Route path="/" element={
+            <>
+              <CardBalance />
+              <TransactionsList />
+            </>
+          } />
+          <Route path="/transaction/:id" element={<TransactionDetail />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;

@@ -1,8 +1,42 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { 
+  faCreditCard, 
+  faCheckCircle, 
+  faStar, 
+  faShoppingCart, 
+  faMoneyBillWave, 
+  faShoppingBasket, 
+  faCoffee, 
+  faTv, 
+  faExchangeAlt, 
+  faBook, 
+  faMusic, 
+  faHome, 
+  faDumbbell,
+  faArrowLeft
+} from '@fortawesome/free-solid-svg-icons';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+library.add(
+  faCreditCard,
+  faCheckCircle,
+  faStar,
+  faShoppingCart,
+  faMoneyBillWave,
+  faShoppingBasket,
+  faCoffee,
+  faTv,
+  faExchangeAlt,
+  faBook,
+  faMusic,
+  faHome,
+  faDumbbell,
+  faArrowLeft
+);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
