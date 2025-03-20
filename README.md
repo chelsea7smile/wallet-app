@@ -2,8 +2,8 @@
 
 A mobile application for managing card transactions, built using React.js and TypeScript.
 
-![Transactions List](https://drive.google.com/file/d/1e_MMdY8H-H_NlJiKWDPcd22XEvTrU7gv)
-![Transaction Detail](https://drive.google.com/file/d/1mucflyFTQiJ-Hzo8e6ZEZt4KA8LOrEoU/)
+![Transactions List](https://ibb.co/VWZLvX7R)
+![Transaction Detail](https://ibb.co/V6M4TPR)
 
 
 ## Features
