@@ -2,6 +2,10 @@
 
 A mobile application for managing card transactions, built using React.js and TypeScript.
 
+![Transactions List](https://drive.google.com/file/d/1e_MMdY8H-H_NlJiKWDPcd22XEvTrU7gv/view?usp=sharing)
+![Transaction Detail](https://drive.google.com/file/d/1mucflyFTQiJ-Hzo8e6ZEZt4KA8LOrEoU/view?usp=sharing)
+
+
 ## Features
 
 - Display card balance and available funds
