@@ -122,7 +122,7 @@ const CardBalance: React.FC = () => {
       </LeftSection>
       <RightSection>
         <Title>No Payment Due</Title>
-        <Subtitle>You've paid your {currentMonth} balance.</Subtitle>
+        <Subtitle>You've paid your <br />{currentMonth} balance.</Subtitle>
         <CheckCircle>
           <CheckIcon icon={faCheck} />
         </CheckCircle>

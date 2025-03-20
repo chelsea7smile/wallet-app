@@ -8,8 +8,8 @@ import './TransactionsList.css';
 
 const TransactionsContainer = styled.div``;
 
-const TransactionIcon: React.FC<{ background: string; icon: any }> = ({ background, icon }) => (
-  <div className="transaction-icon">
+const TransactionIcon: React.FC<{ background: string; icon: any; type: string }> = ({ background, icon, type }) => (
+  <div className="transaction-icon" style={{ backgroundColor: type === 'Payment' ? '#4CAF50' : background }}>
     <FontAwesomeIcon icon={icon} />
   </div>
 );
@@ -30,10 +30,10 @@ const TransactionInfo: React.FC<{ transaction: Transaction }> = ({ transaction }
 
 const TransactionItem: React.FC<{ transaction: Transaction; onClick: () => void }> = ({ transaction, onClick }) => (
   <div className="transaction-item" onClick={onClick}>
-    <TransactionIcon background={transaction.icon.background} icon={transaction.icon.name} />
+    <TransactionIcon background={transaction.icon.background} icon={transaction.icon.name} type={transaction.type} />
     <TransactionInfo transaction={transaction} />
     <div className="transaction-amount">
-      {transaction.type === 'Payment' ? '+' : ''}{Math.abs(transaction.amount).toFixed(2)}
+      {transaction.type === 'Payment' ? '+' : ''}${Math.abs(transaction.amount).toFixed(2)}
     </div>
   </div>
 );
